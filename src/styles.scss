@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/helpers/colors';
+@import 'assets/helpers/grid';
+@import 'assets/helpers/spaces';
+@import 'assets/helpers/typograph';
+@import 'assets/helpers/variables';
+
+// @import 'assets/fonts/icomoon/style.css';
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+}

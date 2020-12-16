@@ -1,0 +1,16 @@
+<div class="card flex flex-wrap">
+  <div class="card-content flex-column">
+    <img
+      src={{pokemon.imagem}}
+      alt="sprite do pokémon"
+      class="card-content--sprite">
+
+    <h2 class="card-content--titulo">{{pokemon.nome}}</h2>
+
+    <div
+      class="card-content--tipo"
+      *ngFor="let tipo of pokemon.tipo">
+        {{tipo}}
+    </div>
+  </div>
+</div>
