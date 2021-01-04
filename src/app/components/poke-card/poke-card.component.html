@@ -1,16 +1,17 @@
-<div class="card flex flex-wrap">
-  <div class="card-content flex-column">
+<div class="card flex justify-center" [ngClass]="pokemon.tipo[0]">
+  <div class="card-content flex flex-column justify-center">
     <img
       src={{pokemon.imagem}}
-      alt="sprite do pokémon"
+      alt={{pokemon.nome}}
       class="card-content--sprite">
 
-    <h2 class="card-content--titulo">{{pokemon.nome}}</h2>
+      <div class="justify-center">
+        <h2 class="card-content--titulo text-center fw-light">{{pokemon.nome}}</h2>
 
-    <div
-      class="card-content--tipo"
-      *ngFor="let tipo of pokemon.tipo">
-        {{tipo}}
-    </div>
+        <div class="card-content--tipo flex justify-center ft-sm mt-5 cl-white text-uppercase" [ngClass]="pokemon.tipo[0]">
+              {{pokemon.tipo[0]}}
+        </div>
+      </div>
+
   </div>
 </div>

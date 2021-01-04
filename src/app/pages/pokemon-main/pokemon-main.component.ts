@@ -12,12 +12,12 @@ export class PokemonMainComponent implements OnInit {
   constructor(private pokeService: PokemonService) { }
 
   ngOnInit() {
-    this.getPoke();
+    this.getPokemon();
   }
 
-  async getPoke(){
+  async getPokemon(){
     let list;
-    for(let i = 1; i < 21; i++){
+    for(let i = 1; i < 35; i++){
       list = await this.pokeService.pokemonList(i).toPromise()
       // this.pokeParams(list)
       this.pokeList.push(list)
