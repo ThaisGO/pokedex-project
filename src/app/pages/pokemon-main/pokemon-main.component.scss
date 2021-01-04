@@ -1,5 +1,5 @@
 .page{
-  width: 100%;
+  // width: 100%;
   background-color: #FFFFFF;
   padding: 30px 0;
   border-radius: 20px;
@@ -8,6 +8,13 @@
     &--card{
       flex-wrap: wrap;
     }
+  }
+}
+
+.search{
+  width: 100%;
+  &--item{
+    flex: 1;
   }
 }
 

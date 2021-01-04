@@ -1,0 +1,10 @@
+<div class="search-field">
+  <input type="text" [(ngModel)]="searchText" (keyup)="handleKeyEvent($event)" [placeholder]="placeholderText">
+  <button type="button"[class.searched]="searched" class="clearButton" (click)="clear()">
+    limpar
+  </button>
+  <button type="button" (click)="search()">
+    <i class="icon icon-search"></i>
+  </button>
+</div>
+

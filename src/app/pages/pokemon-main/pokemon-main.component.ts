@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonMainComponent implements OnInit {
   pokeList: any[] = [];
+  backupPokeList: any[] = [];
 
   constructor(private pokeService: PokemonService) { }
 
@@ -19,11 +20,8 @@ export class PokemonMainComponent implements OnInit {
     let list;
     for(let i = 1; i < 35; i++){
       list = await this.pokeService.pokemonList(i).toPromise()
-      // this.pokeParams(list)
       this.pokeList.push(list)
     }
-      console.log('list aqui', list)
-      // console.log('poke list aqui', this.pokeList)
       this.pokeParams(this.pokeList)
       return list;
   }
@@ -38,5 +36,17 @@ export class PokemonMainComponent implements OnInit {
       }
     })
     console.log('lista pokeParams map', this.pokeList)
+    this.backupPokeList = this.pokeList
+  }
+
+  handlePokeSearch(e){
+    let text = e.toUpperCase();
+    console.log('text', text)
+    this.pokeList = this.backupPokeList
+
+    this.pokeList = this.backupPokeList.filter(p =>
+      text == "" ||
+      (p.nome && p.nome.toUpperCase().includes(text))
+    );
   }
 }
