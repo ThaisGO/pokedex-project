@@ -18,7 +18,7 @@ export class PokemonMainComponent implements OnInit {
 
   async getPokemon(){
     let list;
-    for(let i = 1; i < 35; i++){
+    for(let i = 1; i < 152; i++){
       list = await this.pokeService.pokemonList(i).toPromise()
       this.pokeList.push(list)
     }
