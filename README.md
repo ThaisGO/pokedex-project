@@ -10,8 +10,8 @@ The project is deployed on github [HERE](https://thaisgo.github.io/pokedex-proje
 
 ## Status
 The project is still in development status and I intend to add some more features and fix some problems.
-- [] Create modal component to display pokemon infos
-- [] Fix width of the main page
-- [] Add card animation
-- [] Create pagination component
+- [ ] Create modal component to display pokemon infos
+- [ ] Fix width of the main page
+- [ ] Add card animation
+- [ ] Create pagination component
 
